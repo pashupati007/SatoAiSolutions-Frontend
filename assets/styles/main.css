@@ -1,0 +1,24 @@
+.v-field {
+  border-radius: 8px !important;
+}
+
+.border1px {
+  border: 1px solid #fff;
+}
+
+.card-box-shadow {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #24405a;
+}
+
+.transparent-card {
+  opacity: 0.7;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.v-list-item__prepend {
+  width: 20px !important;
+}

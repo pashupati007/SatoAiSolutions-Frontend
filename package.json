@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@botpress/webchat": "^2.3.8",
+    "@nuxt/http": "^0.6.4",
+    "@pinia/nuxt": "^0.9.0",
+    "axios": "^1.7.9",
+    "nuxt": "^3.15.0",
+    "vue": "latest",
+    "vue-router": "latest",
+    "vue3-carousel": "^0.12.0",
+    "vue3-carousel-nuxt": "^1.1.4"
+  }
+}
