@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-img
-      src="~/assets/images/featured.png"
+      src="~/assets/images/feature.webp"
       class="cursor-pointer"
       width="100%"
       height="100%"

@@ -124,11 +124,11 @@ export default {
       },
       items: [
         {
-          text: "Savage Gardens, London E6 5NB, United Kingdom",
+          text: "Jenkins Lane Depot, London, Barking IG11 0AD, UK",
           icon: "mdi-map-marker",
         },
-        { text: "+977-9804787084, +977-9804780505", icon: "mdi-phone" },
-        { text: "sato@gmail.com", icon: "mdi-email" },
+        { text: "+441915153000", icon: "mdi-phone" },
+        { text: "mukeshsah@gmail.com", icon: "mdi-email" },
       ],
     };
   },

@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer v-model="drawer" app>
     <v-list>
-      <v-list-item subtitle="sato@gmail.com" title="Ai Solutions"></v-list-item>
+      <v-list-item subtitle="mukeshsah@gmail.com" title="Ai Solutions"></v-list-item>
     </v-list>
 
     <v-divider></v-divider>
@@ -21,7 +21,7 @@ export default {
   name: "drawer-component",
   data() {
     return {
-      logoUrl: "~/assets/images/logo.svg",
+      logoUrl: "~/assets/images/logo.png",
       drawer: true,
       menu: [
         { title: "Blogs", link: "/admin/blogs" },

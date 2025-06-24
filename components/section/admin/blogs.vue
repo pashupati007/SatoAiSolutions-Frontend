@@ -88,6 +88,11 @@
             </v-dialog>
           </v-toolbar>
         </template>
+        <template v-slot:item.image="{ item }">
+          <v-avatar size="120" class="my-2" rounded="0">
+            <v-img :src="item.image" aspect-ratio="1" cover> </v-img>
+          </v-avatar>
+        </template>
         <template v-slot:item.actions="{ item }">
           <v-icon class="me-2" size="small" @click="editItem(item)">
             mdi-pencil
@@ -136,6 +141,26 @@ export default {
       descriptions: "",
     },
     selected: "",
+    dataTest: [
+      {
+        title: "The Future of AI in Everyday Life",
+        description:
+          "Explore how artificial intelligence is transforming industries like healthcare, finance, and education.",
+        image: "https://images.unsplash.com/photo-1581093588401-25eb3ef00d44",
+      },
+      {
+        title: "How Remote Work Has Changed Tech Culture",
+        description:
+          "Remote work is here to stay. Here's how companies are adapting their culture and tools for distributed teams.",
+        image: "https://images.unsplash.com/photo-1612178990846-41e7189c8a8c",
+      },
+      {
+        title: "Top 10 UI/UX Design Principles for 2025",
+        description:
+          "Stay ahead of the curve with these modern design principles that improve usability and accessibility.",
+        image: "https://images.unsplash.com/photo-1581276879432-15d5b5f3f5e0",
+      },
+    ],
   }),
 
   computed: {
@@ -157,7 +182,31 @@ export default {
     this.getBlogs();
   },
 
+  mounted() {
+    console.log("data", this.dataTest);
+    // this.dataSeeding();
+  },
   methods: {
+    // dataSeeding() {
+    //   let bodyData = {};
+    //   for (let i = 0; i < this.dataTest.length; i++) {
+    //     console.log(this.dataTest[i].title);
+    //     bodyData = {
+    //       id: i++,
+    //       title: this.dataTest[i]?.title,
+    //       image: this.dataTest[i]?.image,
+    //       descriptions: this.dataTest[i]?.description,
+    //     };
+    //     console.log(bodyData);
+    //     try {
+    //       this.$axios.post("/blog", bodyData).then((response) => {
+    //         // this.blogs.push(bodyData);
+    //       });
+    //     } catch (error) {
+    //       console.error("Error fetching data:", error);
+    //     }
+    //   }
+    // },
     getBlogs() {
       try {
         this.$axios.get("/blog").then((response) => {
@@ -221,6 +270,7 @@ export default {
           image: this.editedItem.image,
           descriptions: this.editedItem.descriptions,
         };
+
         if (this.editedIndex > -1) {
           try {
             this.$axios.put("/blog", bodyData).then((response) => {

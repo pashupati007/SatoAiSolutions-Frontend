@@ -24,10 +24,10 @@ export default defineNuxtPlugin((nuxtApp) => {
         dark: {
           dark: true,
           colors: {
-            background: "#112B43",
-            surface: "#24405A",
-            primary: "#38536E",
-            secondary: "#546D84",
+            background: "#A8F1FF",
+            surface: "#6FE6FC",
+            primary: "#4ED7F1",
+            secondary: "#168aad",
             text: "C4CED8",
             error: "#A93737",
             info: "#2196F3",

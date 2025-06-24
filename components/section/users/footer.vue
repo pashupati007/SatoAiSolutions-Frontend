@@ -23,7 +23,7 @@
         <v-col cols="12" lg="4" md="4" class="text-left">
           <div class="mt-5 px-5 text-left text-h6 font-white-3">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.6745540497386!2d0.060414050442371456!3d51.509006275036676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a89cb7a8361b%3A0xc74ded44efde6823!2sNew%20Beckton%20Park!5e1!3m2!1sen!2snp!4v1735813609774!5m2!1sen!2snp"
+              :src="mapUrl"
               width="100%"
               height="350"
               style="border: 0; width: 100%"
@@ -63,7 +63,7 @@
 
       <v-row class="px-10 pb-10" justify="space-between" align="center">
         <p class="text-subtitle-1 text-white-3">
-          © sato Pvt. Ltd. All rights reserved
+          © mukehsah Pvt. Ltd. All rights reserved
         </p>
       </v-row>
     </v-container>
@@ -74,14 +74,16 @@
 export default {
   data() {
     return {
+      mapUrl:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1227.2811803036063!2d0.07799823111898424!3d51.52369076412407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a61a6b18d747%3A0xa2f2f4bfd53cbba2!2sJenkins%20Lane%20Depot%2C%20London%2C%20Barking%20IG11%200AD%2C%20UK!5e1!3m2!1sen!2snp!4v1746769834451!5m2!1sen!2snp",
       bgImage: "/images/bg-image.webp",
       items: [
         {
-          text: "Savage Gardens, London E6 5NB, United Kingdom",
+          text: "Jenkins Lane Depot, London, Barking IG11 0AD, UK",
           icon: "mdi-map-marker",
         },
-        { text: "+977-9804780505 +977-9804787084", icon: "mdi-phone" },
-        { text: "sato@gmail.com", icon: "mdi-email" },
+        { text: "+441915153000", icon: "mdi-phone" },
+        { text: "mukeshsah@gmail.com", icon: "mdi-email" },
       ],
       rules: {
         required: (value) => !!value || "Required.",

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-app-bar class="pa-5" color="#24405A" tile flat app>
+    <v-app-bar class="pa-5" color="primary" tile flat app>
       <v-app-bar-title>
         <v-img
-          src="~/assets/images/logo.svg"
+          src="~/assets/images/logo.png"
           class="cursor-pointer"
           width="168px"
           height="58px"

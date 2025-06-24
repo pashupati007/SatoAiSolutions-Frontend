@@ -81,6 +81,11 @@ abouts
             </v-dialog>
           </v-toolbar>
         </template>
+        <template v-slot:item.image="{ item }">
+          <v-avatar size="180" rounded="0">
+            <v-img :src="item.image" aspect-ratio="1" cover> </v-img>
+          </v-avatar>
+        </template>
         <template v-slot:item.actions="{ item }">
           <v-icon class="me-2" size="small" @click="editItem(item)">
             mdi-pencil

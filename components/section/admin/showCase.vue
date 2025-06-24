@@ -96,6 +96,11 @@
             </v-dialog>
           </v-toolbar>
         </template>
+        <template v-slot:item.image="{ item }">
+          <v-avatar size="120" class="my-2" rounded="0">
+            <v-img :src="item.image" aspect-ratio="1" cover> </v-img>
+          </v-avatar>
+        </template>
         <template v-slot:item.actions="{ item }">
           <v-icon class="me-2" size="small" @click="editItem(item)">
             mdi-pencil
@@ -228,32 +233,32 @@ export default {
     async save() {
       const validation = await this.$refs.form.validate();
       if (validation.valid) {
-      let bodyData = {
-        id: this.editedItem.id,
-        name: this.editedItem.name,
-        company: this.editedItem.company,
-        image: this.editedItem.image,
-        job_details: this.editedItem.job_details,
-      };
-      if (this.editedIndex > -1) {
-        try {
-          this.$axios.put("/showCase", bodyData).then((response) => {
-            this.showCases[this.showCases.indexOf(this.selected)] = bodyData;
-          });
-        } catch (error) {
-          console.error("Error fetching data:", error);
+        let bodyData = {
+          id: this.editedItem.id,
+          name: this.editedItem.name,
+          company: this.editedItem.company,
+          image: this.editedItem.image,
+          job_details: this.editedItem.job_details,
+        };
+        if (this.editedIndex > -1) {
+          try {
+            this.$axios.put("/showCase", bodyData).then((response) => {
+              this.showCases[this.showCases.indexOf(this.selected)] = bodyData;
+            });
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
+        } else {
+          try {
+            this.$axios.post("/showCase", bodyData).then((response) => {
+              this.showCases.push(bodyData);
+            });
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
         }
-      } else {
-        try {
-          this.$axios.post("/showCase", bodyData).then((response) => {
-            this.showCases.push(bodyData);
-          });
-        } catch (error) {
-          console.error("Error fetching data:", error);
-        }
+        this.close();
       }
-      this.close();
-    }
     },
   },
 };

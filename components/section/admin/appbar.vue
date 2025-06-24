@@ -2,7 +2,7 @@
   <div>
     <v-app-bar flat class="px-5" height="60">
       <v-img
-        src="~/assets/images/logo.svg"
+        src="~/assets/images/logo.png"
         class="cursor-pointer"
         width="168px"
         height="48px"
@@ -32,7 +32,7 @@
 export default {
   data() {
     return {
-      logoUrl: "~/assets/images/logo.svg",
+      logoUrl: "~/assets/images/logo.png",
       items: [{ title: "Logout" }],
     };
   },
